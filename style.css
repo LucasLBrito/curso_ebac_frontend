@@ -1,0 +1,54 @@
+body {
+    background-image: url(/_2475dbac-c711-4eae-88c7-aeceaa36a0b5.jpeg);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    border-radius: 10px;
+    padding:  100px 20%;
+    margin: 10% 10%;
+    /* From https://css.glass */
+    background: rgba(229, 229, 247, 0.82);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.7px);
+    -webkit-backdrop-filter: blur(4.7px);
+    border: 1px solid rgba(229, 229, 247, 0.35);
+
+}
+form h1 {
+    color:#8388f3 ;
+}
+form label{
+    margin-right: 25%;
+    font-weight: bold;
+    color: #8388f3;
+}
+form input{
+    margin: 25px;
+    padding: 25px;
+    border: #8388f3;
+    border-radius: 10px;
+    
+}
+form input::placeholder{
+    color: #8388f3;
+}
+form input:focus{
+    border: #444cf7;
+}
+button {
+    padding:25px 50px;
+    color: white;
+    border: #e5e5f7;
+    border-radius: 10px;
+    background-color: #444cf7;
+}
+#mensagem{
+ color: #8388f3;
+}
+
+

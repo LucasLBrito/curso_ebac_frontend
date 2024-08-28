@@ -3,14 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
     <title>Form verif</title>
 </head>
 <body>
-    <h1>login</h1>
-    <form action="POST">
-        <label for="campoA"></label>
-        <input type="number" id="campoA" name="campoA" placeholder="">
+    
+    <form id="formulario">
+        <h1>Verificar se A é maior que B</h1>
+        <label for="campoA">Valor A</label>
+        <input type="number" id="campoA" name="campoA" placeholder="Valor menor">
+        <label for="campoB">Valor B</label>
+        <input type="number" id="campoB" name="campoB" placeholder="Valor maior">
+        <h3 id="mensagem">Insira o valor A e B</h3>
+        <button type="submit" id="sumbitbtn">Verificar</button>
     </form>
     
+    <script src="main.js"></script>
 </body>
 </html>
