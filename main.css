@@ -14,13 +14,20 @@ html{
     margin: 0 auto;
 }
 
-header {
+header,footer {
     background-color: #192a56;
     padding: 16px 0 0 0;
     color: #fff;
 }
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
 
-header > .container{
+header > .container
+,footer > .container{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -101,7 +108,7 @@ section h2{
 
 }
 
-.lista-veiculos li button{
+ button{
     display: block;
     width: 100%;
     padding:  8px 0;
@@ -117,4 +124,42 @@ section h2{
 .preço del{
     color: gray;
     font-size: 14px;
+}
+form{
+    max-width: 360px;
+    padding: 2px;
+}
+
+.Contato-item{
+    margin-bottom: 16px;
+}
+
+.Contato-item label{
+    font-weight: bold;
+    display: block;
+}
+.Contato-item input, .Contato-item textarea{
+    width: 100%;
+    display: block;
+    padding: 8px;
+
+}
+
+.Contato-item textarea{
+    resize: none;
+    height: 120px;
+    margin-bottom: 16px;
+}
+
+form button{
+    max-width: 160px;
+}
+
+footer li{
+    list-style: none;
+    margin-left: 16px;
+}
+
+footer li img{
+    height: 32px;
 }
