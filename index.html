@@ -178,7 +178,7 @@
         <section>
             <div class="container">
                 <h2>Entre em Contato</h2>
-                <form action="">
+                <form>
                     <div class="Contato-item">
                         <label for="nome">Nome:</label>
                         <input type="text" id="nome" name="nome">
@@ -230,6 +230,9 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="https:////cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.mask.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="./js/messages_pt_BR.min.js"></script>
     <script>
         $(document).ready(function(){
             $('#slider').slick({
@@ -239,8 +242,41 @@
             $('.menu-hamburger').click(function(){
                 $('nav').slideToggle();
             });
+            
+            /*0 para representar numeros e S para representar letras*/
+            $('#telefone').mask('(00) 00000-0000',{
+                placeholder: '(__) _____-____'
+            });
 
-        })
+            $('form').validate({
+                rules: {
+                    nome: {
+                        required: true,
+                    },
+                    telefone: {
+                        required: true,
+                        minlength: 14
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    mensagem: {
+                        required: true
+                    },
+                    veiculo: {
+                        required: true
+                    },
+                },
+                submitHandler: function(form) {
+                    console.log(form);
+                },
+                invalidHandler: function(event, validator) {
+                    let camposIncorretos = validator.numberOfInvalids();
+                    console.log(camposIncorretos);
+                }
+            });
+        });    
     </script>
 </body>
 
