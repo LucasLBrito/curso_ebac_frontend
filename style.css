@@ -23,7 +23,9 @@ header{
     padding: 16px 0 0;
     border-bottom: 1px solid #e0e0e0;
 }
-
+main{
+    margin-bottom: 56%;
+}
 .menu > li {
     position: relative;
     float: left;
@@ -54,11 +56,11 @@ header{
 
    
 }
+.botao_menu{
+    display: none;
+}
 .clear{
     clear: both;
-}
-main{
-    padding-bottom: 56%;
 }
 .conteudo{
     display: grid;
@@ -95,4 +97,87 @@ aside .notícias{
     grid-template-columns: repeat(3,30%);
     column-gap: 1%;
     row-gap: 5%;
+}
+/*Inicio do responsivo*/
+@media screen and (max-width:768px){
+    .conteudo{
+        display: block;
+    }
+    .container{
+        max-width: 90%;
+    }
+
+    .destaque{
+        margin-bottom: 32px;
+    }
+    
+    .destaque .notícias a{
+        display: block;
+        font-size: 1.5em;
+    
+    }
+    .destaque .notícias a img{
+        margin-right: 0;
+    }
+    .principal_not{
+        display: block;
+    }
+    .principal_not .notícias{
+        margin-bottom: 24px;
+    }
+    aside{
+        padding-left: 0;
+    }
+    header , div.container{
+        display: flex;
+        flex-direction: column;
+    }
+    .menu{
+        display: none;
+    }
+    .menu > li {
+        clear: both;
+        position: relative;
+        float: left;
+        list-style: none;
+        padding: 16px;
+        border-top:4px solid transparent;
+    }
+    .submenu{
+        display: block;
+        background-color: white;
+        position: relative;
+        border: none;
+        width: 100%;
+    }
+    .submenu li{
+        display: block;
+        padding: 8px;
+    
+    }   
+    .botao_menu{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 16px;
+    }
+
+    .botao_menu button{
+        display: block;
+        margin-top: 16px;
+        padding: 8px;
+        border-radius: 15px;
+    }
+}
+
+@media  screen and (min-width:768px) and (max-width:1024px){
+    .container{
+        max-width: 90%;
+    }
+
+    .destaque .notícias a{
+        font-size: 1.5em;
+    }
+    .principal_not{
+        grid-template-columns: repeat(2, 48%);
+    }
 }

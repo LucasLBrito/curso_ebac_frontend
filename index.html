@@ -17,7 +17,9 @@
             <input type="search" placeholder="BUsque por notícias">
             <button type="submit">pesquisar</button>
         </form>
-
+        <div class="botao_menu">
+            <button type="button"><img src="/botao-de-inicio.png" ></button>
+        </div>
        </div>
        <nav class="container">
         <ul class="menu">
@@ -79,7 +81,7 @@
         </main>
         <aside>
             <section class="novidades">
-                <h2>novidades</h2>
+                <h2>Novidades</h2>
                 <article class="notícias">
                     <a href="">
                         <img src="https://placehold.co/320x320" alt="Placeholder Image"/>
@@ -104,6 +106,13 @@
     </div>
 
     
-    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $('.botao_menu button').click(function(){
+                $('.menu').slideToggle();
+            });
+        });
+    </script>
 </body>
 </html>
