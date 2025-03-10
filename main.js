@@ -9,7 +9,7 @@ $(document).ready(function(){
         speed: 500, // Velocidade da transição
         slidesToShow: 1, // Mostrar 1 slide por vez (obrigatório para fade)
         slidesToScroll: 1, // Quantos slides avançam por vez
-        arrows: true, // Exibir setas de navegação
+        arrows: false, // Exibir setas de navegação
         fade: true, // Ativa a transição em fade
         cssEase: 'linear' // Garante uma transição mais suave
     });
