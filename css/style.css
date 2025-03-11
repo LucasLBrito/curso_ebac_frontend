@@ -131,7 +131,7 @@ main{
 .slider_produtos{
     max-width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;
     align-content: space-evenly;
     gap: 16px;
@@ -218,7 +218,7 @@ footer h1{
         height: 100%;
     }
     .slider_produtos{
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         justify-items: center;
     }
     .item_produto img{
