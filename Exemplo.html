@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Barra de Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">BlogMaster</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Categorias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contato</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Alerta -->
+        <div class="row mb-4">
+            <div class="col">
+                <div class="alert alert-success d-flex align-items-center" role="alert">
+                    <i class="bi bi-info-circle-fill me-2"></i>
+                    <div>
+                        Confira as novidades do blog 
+                        <a href="#" class="alert-link">clicando aqui</a>
+                    </div>
+                    <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conteúdo Principal e Barra Lateral -->
+        <div class="row">
+            <!-- Área de Posts -->
+            <div class="col-lg-8 mb-4">
+                <h2 class="mb-4 border-bottom pb-2">Últimas Postagens</h2>
+                
+                <div class="row g-4">
+                    <!-- Post 1 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card post">
+                            <img src="https://placehold.co/600x400/3498db/ffffff?text=Tecnologia" class="card-img-top" alt="Imagem de tecnologia">
+                            <div class="card-body">
+                                <h4 class="h5 card-title">Novidades em Tecnologia</h4>
+                                <time><i class="bi bi-calendar3"></i> 19/03/2025</time>
+                                <p class="card-text">Descubra as últimas tendências e inovações do mundo tecnológico...</p>
+                                <a href="#" class="btn btn-primary">Ver mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Post 2 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card post">
+                            <img src="https://placehold.co/600x400/e74c3c/ffffff?text=Saúde" class="card-img-top" alt="Imagem de saúde">
+                            <div class="card-body">
+                                <h4 class="h5 card-title">Dicas para uma Vida Saudável</h4>
+                                <time><i class="bi bi-calendar3"></i> 18/03/2025</time>
+                                <p class="card-text">Aprenda como manter um estilo de vida equilibrado com estas dicas...</p>
+                                <a href="#" class="btn btn-primary">Ver mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Post 3 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card post">
+                            <img src="https://placehold.co/600x400/27ae60/ffffff?text=Viagem" class="card-img-top" alt="Imagem de viagem">
+                            <div class="card-body">
+                                <h4 class="h5 card-title">Destinos Imperdíveis</h4>
+                                <time><i class="bi bi-calendar3"></i> 17/03/2025</time>
+                                <p class="card-text">Conheça lugares incríveis para sua próxima aventura de viagem...</p>
+                                <a href="#" class="btn btn-primary">Ver mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Post 4 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card post">
+                            <img src="https://placehold.co/600x400/f39c12/ffffff?text=Culinária" class="card-img-top" alt="Imagem de culinária">
+                            <div class="card-body">
+                                <h4 class="h5 card-title">Receitas Saudáveis</h4>
+                                <time><i class="bi bi-calendar3"></i> 16/03/2025</time>
+                                <p class="card-text">Descubra receitas deliciosas e saudáveis para o seu dia a dia...</p>
+                                <a href="#" class="btn btn-primary">Ver mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Post 5 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card post">
+                            <img src="https://placehold.co/600x400/9b59b6/ffffff?text=Educação" class="card-img-top" alt="Imagem de educação">
+                            <div class="card-body">
+                                <h4 class="h5 card-title">Dicas de Estudo</h4>
+                                <time><i class="bi bi-calendar3"></i> 15/03/2025</time>
+                                <p class="card-text">Métodos eficientes para melhorar seu aprendizado e produtividade...</p>
+                                <a href="#" class="btn btn-primary">Ver mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Post 6 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card post">
+                            <img src="https://placehold.co/600x400/1abc9c/ffffff?text=Meio+Ambiente" class="card-img-top" alt="Imagem de meio ambiente">
+                            <div class="card-body">
+                                <h4 class="h5 card-title">Sustentabilidade</h4>
+                                <time><i class="bi bi-calendar3"></i> 14/03/2025</time>
+                                <p class="card-text">Práticas sustentáveis para ajudar a preservar nosso planeta...</p>
+                                <a href="#" class="btn btn-primary">Ver mais</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Paginação -->
+                <nav aria-label="Navegação de páginas" class="mt-4">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Próximo</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <!-- Barra Lateral -->
+            <div class="col-lg-4">
+                <div class="sidebar">
+                    <!-- Seção de Anunciantes -->
+                    <div class="ad-section mb-4">
+                        <h2 class="h4 mb-3 border-bottom pb-2">Anunciantes</h2>
+                        <div class="text-center">
+                            <img src="https://placehold.co/320x200/34495e/ffffff?text=Publicidade" class="img-fluid rounded mb-3" alt="Anúncio">
+                            <div class="d-grid gap-2">
+                                <a href="#" class="btn btn-outline-secondary btn-sm">Saiba mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Categorias Populares -->
+                    <div class="card mb-4">
+                        <div class="card-header bg-white">
+                            <h3 class="h5 mb-0">Categorias Populares</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Tecnologia
+                                    <span class="badge bg-primary rounded-pill">14</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Saúde
+                                    <span class="badge bg-primary rounded-pill">8</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Viagens
+                                    <span class="badge bg-primary rounded-pill">11</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Educação
+                                    <span class="badge bg-primary rounded-pill">9</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Newsletter -->
+                    <div class="card">
+                        <div class="card-header bg-white">
+                            <h3 class="h5 mb-0">Inscreva-se na Newsletter</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Receba nossas atualizações diretamente no seu email.</p>
+                            <form>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" placeholder="Seu email" required>
+                                </div>
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary">Inscrever-se</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Seção de Contato -->
+        <div class="row">
+            <div class="col-12">
+                <div class="contact-form">
+                    <h2 class="mb-4 border-bottom pb-2">Entre em contato</h2>
+                    <form class="row g-3 needs-validation" novalidate>
+                        <div class="col-md-6">
+                            <label class="form-label" for="nome">Seu nome:</label>
+                            <input type="text" class="form-control" id="nome" name="nome" required>
+                            <div class="invalid-feedback">
+                                Por favor, informe seu nome.
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="email">Seu email:</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                            <div class="invalid-feedback">
+                                Por favor, informe um email válido.
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label" for="assunto">Assunto:</label>
+                            <input type="text" class="form-control" id="assunto" name="assunto" required>
+                            <div class="invalid-feedback">
+                                Por favor, informe o assunto.
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label" for="mensagem">Sua mensagem:</label>
+                            <textarea class="form-control" id="mensagem" name="mensagem" rows="5" required></textarea>
+                            <div class="invalid-feedback">
+                                Por favor, escreva sua mensagem.
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="aceito-termos" name="aceito-termos" required>
+                                <label class="form-check-label" for="aceito-termos">Li e concordo com os termos de uso do site</label>
+                                <div class="invalid-feedback">
+                                    Você deve concordar com os termos.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-success">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Rodapé -->
+        <footer class="footer text-center">
+            <div class="row">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5>Sobre o BlogMaster</h5>
+                    <p class="text-muted">Um blog dedicado a compartilhar conhecimento e informações sobre diversos assuntos relevantes.</p>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5>Links Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none">Home</a></li>
+                        <li><a href="#" class="text-decoration-none">Categorias</a></li>
+                        <li><a href="#" class="text-decoration-none">Sobre</a></li>
+                        <li><a href="#" class="text-decoration-none">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Redes Sociais</h5>
+                    <div class="d-flex justify-content-center justify-content-md-start">
+                        <a href="#" class="text-decoration-none me-3 fs-4"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-decoration-none me-3 fs-4"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-decoration-none me-3 fs-4"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-decoration-none fs-4"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12">
+                    <p class="text-muted mb-0">&copy; 2025 BlogMaster. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <!-- Script para validação de formulário -->
+    <script>
+    // Exemplo de JavaScript para validação de formulário
+    (function () {
+        'use strict'
+        
+        // Busca todos os formulários aos quais queremos aplicar estilos de validação personalizados do Bootstrap
+        var forms = document.querySelectorAll('.needs-validation')
+        
+        // Impede o envio do formulário e aplica a validação
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    
+                    form.classList.add('was-validated')
+                }, false)
+            })
+    })()
+    </script>
+</body>
+</html>

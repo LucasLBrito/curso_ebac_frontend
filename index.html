@@ -1,125 +1,422 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BOOTSCRAP</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
-<body>  
-   <!--Tabela com bootscrap-->
-    <table class="table table-primary table-striped table-hover">
-        <caption>Tabela de Produtos</caption>
-        <thead>
-            <th>Nome do produto </th>
-            <th>Preço Original</th>
-            <th>Preço atual</th>
-            <th>Desconto</th>
-        </thead>
-        <tbody>
-            <tr>
-                <td> Iphone 13</td>
-                <td> 7.000</td>
-                <td> 5.0000</td>
-                <td> 2.000</td>
-            </tr>
-            <tr>
-                <td> Iphone 13</td>
-                <td> 7.000</td>
-                <td> 5.0000</td>
-                <td> 2.000</td>
-            </tr>
-            <tr>
-                <td> Iphone 13</td>
-                <td> 7.000</td>
-                <td> 5.0000</td>
-                <td> 2.000</td>
-            </tr>
-            <tr>
-                <td> Iphone 13</td>
-                <td> 7.000</td>
-                <td> 5.0000</td>
-                <td> 2.000</td>
-            </tr>
-        </tbody>
-    </table>
-    <!--Grid com bootscrap-->
-    <h1>BOOTSCRAP</h1>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <img src="https://placehold.co/180x180" alt="">
-                <h3>Produto</h3>
-            </div>
-            <div class="col">
-                <img src="https://placehold.co/180x180" alt="">
-                <h3>Produto</h3>
-            </div>
-            <div class="col">
-                <img src="https://placehold.co/180x180" alt="">
-                <h3>Produto</h3>
-            </div>
-            <div class="col">
-                <img src="https://placehold.co/180x180" alt="">
-                <h3>Produto</h3>
-            </div>
-            <div class="col">
-                <img src="https://placehold.co/180x180" alt="">
-                <h3>Produto</h3>
-            </div>
-        </div>
-    </div>
-
-
-    <!--collapse tipo perguntas com bootscrap-->
-       <div class="accordion">
-        <div class="accordion-item">
-            <div class="accordion-header">
-                <button class="accordion-button " data-bs-toggle="collapse" data-bs-target="#pergunta1">
-                    Pergunta 
-                </button>
-            </div>
-            <div class="accordion-collapse collapse show">
-                <div class="accordion-body" id="pergunta1">
-                    Resposta
-                </div>
-        </div>
-        <div class="accordion-item">
-            <div class="accordion-header">
-                <button class="accordion-button " data-bs-toggle="collapse" data-bs-target="#pergunta2">
-                    Pergunta 2
-                </button>
-            </div>
-            <div class="accordion-collapse collapse show">
-                <div class="accordion-body" id="pergunta2">
-                    Resposta 2
-                </div>
+    <title>Tutorial Bootstrap</title>
     
-        </div>
-       </div>
-
-
-       <!--collapse com bootscrap-->
-       <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#preço">
-        ver Preço
-       </button>
-         <div class="collapse collapse-hotizontal" id="preço" >
-              <div>
-                7.000
-              </div>
-         </div>
-
-<!-- alert com bootscrap-->
-<div class="alert alert-primary alert-dismissible" >
-    <button class="btn-close" data-bs-dismiss="alert"></button>
-    A simple primary alert—check it out!
+    <!-- Link para o CSS do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Estilos adicionais para demonstração */
+        section {
+            margin-bottom: 50px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+        }
+        
+        .section-title {
+            color: #0d6efd;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #dee2e6;
+        }
+        
+        .price-box {
+            padding: 15px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .example-caption {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <header class="text-center mb-5">
+            <h1 class="display-4">Tutorial Bootstrap</h1>
+            <p class="lead">Exemplos práticos de componentes e classes do Bootstrap 5</p>
+        </header>
+        
+        <!-- SEÇÃO 1: TABELA -->
+        <section id="tabelas">
+            <h2 class="section-title">1. Tabelas no Bootstrap</h2>
+            <p class="mb-4">As tabelas no Bootstrap podem ser estilizadas facilmente usando classes predefinidas:</p>
+            
+            <div class="table-responsive">
+                <table class="table table-primary table-striped table-hover">
+                    <caption>Tabela de Produtos</caption>
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Nome do produto</th>
+                            <th>Preço Original</th>
+                            <th>Preço atual</th>
+                            <th>Desconto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>iPhone 13</td>
+                            <td>R$ 7.000,00</td>
+                            <td>R$ 5,000,00</td>
+                            <td>R$ 2.000,00</td>
+                        </tr>
+                        <tr>
+                            <td>Samsung Galaxy S21</td>
+                            <td>R$ 6.500,00</td>
+                            <td>R$ 4.800,00</td>
+                            <td>R$ 1.700,00</td>
+                        </tr>
+                        <tr>
+                            <td>Google Pixel 6</td>
+                            <td>R$ 5.800,00</td>
+                            <td>R$ 4.200,00</td>
+                            <td>R$ 1.600,00</td>
+                        </tr>
+                        <tr>
+                            <td>Xiaomi Mi 11</td>
+                            <td>R$ 4.500,00</td>
+                            <td>R$ 3.900,00</td>
+                            <td>R$ 600,00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <p class="example-caption">
+                <strong>Classes usadas:</strong> table, table-primary, table-striped, table-hover, table-responsive, table-dark
+            </p>
+        </section>
+        
+        <!-- SEÇÃO 2: SISTEMA DE GRID -->
+        <section id="grid">
+            <h2 class="section-title">2. Sistema de Grid</h2>
+            <p class="mb-4">O sistema de grid do Bootstrap permite criar layouts responsivos facilmente:</p>
+            
+            <div class="container">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://placehold.co/300x180" class="card-img-top" alt="Placeholder">
+                            <div class="card-body">
+                                <h5 class="card-title">Produto 1</h5>
+                                <p class="card-text">Descrição curta do produto com detalhes importantes.</p>
+                                <a href="#" class="btn btn-primary btn-sm">Ver detalhes</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://placehold.co/300x180" class="card-img-top" alt="Placeholder">
+                            <div class="card-body">
+                                <h5 class="card-title">Produto 2</h5>
+                                <p class="card-text">Descrição curta do produto com detalhes importantes.</p>
+                                <a href="#" class="btn btn-primary btn-sm">Ver detalhes</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://placehold.co/300x180" class="card-img-top" alt="Placeholder">
+                            <div class="card-body">
+                                <h5 class="card-title">Produto 3</h5>
+                                <p class="card-text">Descrição curta do produto com detalhes importantes.</p>
+                                <a href="#" class="btn btn-primary btn-sm">Ver detalhes</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://placehold.co/300x180" class="card-img-top" alt="Placeholder">
+                            <div class="card-body">
+                                <h5 class="card-title">Produto 4</h5>
+                                <p class="card-text">Descrição curta do produto com detalhes importantes.</p>
+                                <a href="#" class="btn btn-primary btn-sm">Ver detalhes</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://placehold.co/300x180" class="card-img-top" alt="Placeholder">
+                            <div class="card-body">
+                                <h5 class="card-title">Produto 5</h5>
+                                <p class="card-text">Descrição curta do produto com detalhes importantes.</p>
+                                <a href="#" class="btn btn-primary btn-sm">Ver detalhes</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="example-caption">
+                <strong>Classes usadas:</strong> container, row, col, row-cols-1, row-cols-sm-2, row-cols-md-3, row-cols-lg-5, g-4, card, card-img-top, card-body, card-title, card-text, btn, btn-primary, btn-sm
+            </p>
+        </section>
+        
+        <!-- SEÇÃO 3: ACCORDION -->
+        <section id="accordion">
+            <h2 class="section-title">3. Componente Accordion</h2>
+            <p class="mb-4">O accordion é perfeito para mostrar informações em formato de perguntas e respostas:</p>
+            
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#pergunta1" aria-expanded="true" aria-controls="pergunta1">
+                            Como faço para comprar um produto?
+                        </button>
+                    </h2>
+                    <div id="pergunta1" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Para comprar um produto, basta selecionar o item desejado, adicionar ao carrinho e finalizar a compra. Aceitamos diversos métodos de pagamento, incluindo cartão de crédito, boleto bancário e PIX.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pergunta2" aria-expanded="false" aria-controls="pergunta2">
+                            Qual é o prazo de entrega?
+                        </button>
+                    </h2>
+                    <div id="pergunta2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            O prazo de entrega varia de acordo com a sua localização. Normalmente, as entregas são realizadas em até 7 dias úteis para capitais e regiões metropolitanas, e em até 15 dias úteis para outras localidades.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pergunta3" aria-expanded="false" aria-controls="pergunta3">
+                            Como funciona a política de devolução?
+                        </button>
+                    </h2>
+                    <div id="pergunta3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Você tem até 7 dias após o recebimento do produto para solicitar a devolução ou troca. O produto deve estar na embalagem original e sem sinais de uso. Entre em contato com nosso suporte para iniciar o processo.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="example-caption">
+                <strong>Classes usadas:</strong> accordion, accordion-item, accordion-header, accordion-button, accordion-collapse, collapse, accordion-body
+            </p>
+        </section>
+        
+        <!-- SEÇÃO 4: COLLAPSE -->
+        <section id="collapse">
+            <h2 class="section-title">4. Componente Collapse</h2>
+            <p class="mb-4">O componente Collapse permite mostrar/ocultar conteúdo com um botão:</p>
+            
+            <div class="d-flex flex-column align-items-center">
+                <button class="btn btn-primary mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#preço" aria-expanded="false" aria-controls="preço">
+                    Ver Preço Promocional
+                </button>
+                
+                <div class="collapse w-100" id="preço">
+                    <div class="price-box text-center">
+                        <span class="text-decoration-line-through me-2">R$ 7.000,00</span>
+                        <span class="text-success">R$ 5.000,00</span>
+                        <div class="small mt-2">Oferta válida até o fim do estoque!</div>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="example-caption">
+                <strong>Classes usadas:</strong> btn, btn-primary, collapse, d-flex, flex-column, align-items-center, text-center, text-decoration-line-through, text-success
+            </p>
+        </section>
+        
+        <!-- SEÇÃO 5: ALERTS -->
+        <section id="alerts">
+            <h2 class="section-title">5. Componente Alert</h2>
+            <p class="mb-4">Os alertas são úteis para fornecer feedback ao usuário:</p>
+            
+            <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                <strong>Novidade!</strong> Confira nossa nova coleção de smartphones!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Sucesso!</strong> Seu pedido foi realizado com sucesso.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Atenção!</strong> Seu carrinho será esvaziado em 30 minutos.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Erro!</strong> Não foi possível processar seu pagamento.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            
+            <p class="example-caption">
+                <strong>Classes usadas:</strong> alert, alert-primary, alert-success, alert-warning, alert-danger, alert-dismissible, fade, show, btn-close
+            </p>
+        </section>
+        
+        <!-- SEÇÃO 6: COMPONENTE ADICIONAL - NAVBAR -->
+        <section id="navbar">
+            <h2 class="section-title">6. Componente Navbar</h2>
+            <p class="mb-4">A barra de navegação é um componente essencial para sites responsivos:</p>
+            
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">TechStore</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Produtos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Promoções</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contato</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                            <button class="btn btn-outline-light" type="submit">Buscar</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+            
+            <p class="example-caption">
+                <strong>Classes usadas:</strong> navbar, navbar-expand-lg, navbar-dark, bg-dark, container-fluid, navbar-brand, navbar-toggler, navbar-toggler-icon, navbar-collapse, navbar-nav, nav-item, nav-link, active, d-flex, form-control, btn, btn-outline-light
+            </p>
+        </section>
+        
+        <!-- SEÇÃO 7: COMPONENTE ADICIONAL - FORMULÁRIO -->
+        <section id="forms">
+            <h2 class="section-title">7. Formulários</h2>
+            <p class="mb-4">Os formulários no Bootstrap são fáceis de estilizar e validar:</p>
+            
+            <form class="row g-3 needs-validation" novalidate>
+                <div class="col-md-6">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="nome" required>
+                    <div class="valid-feedback">
+                        Parece bom!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor, informe seu nome.
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                    <div class="invalid-feedback">
+                        Por favor, informe um email válido.
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label for="endereco" class="form-label">Endereço</label>
+                    <input type="text" class="form-control" id="endereco" placeholder="Rua, número, bairro" required>
+                    <div class="invalid-feedback">
+                        Por favor, informe seu endereço.
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="cidade" class="form-label">Cidade</label>
+                    <input type="text" class="form-control" id="cidade" required>
+                    <div class="invalid-feedback">
+                        Por favor, informe sua cidade.
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="estado" class="form-label">Estado</label>
+                    <select class="form-select" id="estado" required>
+                        <option selected disabled value="">Escolha...</option>
+                        <option>SP</option>
+                        <option>RJ</option>
+                        <option>MG</option>
+                        <option>RS</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Por favor, selecione um estado.
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <label for="cep" class="form-label">CEP</label>
+                    <input type="text" class="form-control" id="cep" required>
+                    <div class="invalid-feedback">
+                        Por favor, informe seu CEP.
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="termos" required>
+                        <label class="form-check-label" for="termos">
+                            Concordo com os termos e condições
+                        </label>
+                        <div class="invalid-feedback">
+                            Você deve concordar antes de enviar.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Enviar</button>
+                </div>
+            </form>
+            
+            <p class="example-caption">
+                <strong>Classes usadas:</strong> row, g-3, needs-validation, col-md-6, form-label, form-control, valid-feedback, invalid-feedback, col-12, form-select, form-check, form-check-input, form-check-label, btn, btn-primary
+            </p>
+        </section>
+        
+        <footer class="mt-5 pt-5 text-center text-muted border-top">
+            <p>Tutorial Bootstrap 5 - Exemplos práticos</p>
+            <p class="mb-0">Criado com <span class="text-danger">♥</span> para ajudar no aprendizado</p>
+        </footer>
     </div>
 
-
-
-
-
-
-       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- JavaScript do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <!-- Script para ativar a validação de formulário -->
+    <script>
+    // Exemplo de JavaScript para validação de formulário
+    (function () {
+      'use strict'
+      
+      // Busca todos os formulários aos quais queremos aplicar estilos de validação personalizados do Bootstrap
+      var forms = document.querySelectorAll('.needs-validation')
+      
+      // Impede o envio do formulário e aplica a validação
+      Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+            
+            form.classList.add('was-validated')
+          }, false)
+        })
+    })()
+    </script>
 </body>
 </html>
