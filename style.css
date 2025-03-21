@@ -1,0 +1,19 @@
+body{
+    padding-top: 200px;
+    background-image: url('https://i.redd.it/animation-backgrounds-v0-9xbafoygu7la1.jpg?width=2688&format=pjpg&auto=webp&s=51b32a300c0a7146ea6b4361564c9b97dbe50c75');
+
+    
+}
+
+
+form{
+    background: rgba( 255, 255, 255, 0.15 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 1em;
+    width: 50%;
+    border-radius: 1em;
+}
