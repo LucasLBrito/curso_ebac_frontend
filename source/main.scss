@@ -1,29 +1,81 @@
-$corPrincipal: #3498db; // Azul
-$corDoTexto: #2c3e50; // Cinza escuro
+@use 'config/reset';
+@use 'config/variaveris';
+@use 'sass:math';
 
-body {
-  background-color: $corPrincipal;
-  color: white;
-  font-family: Arial, sans-serif;
+@mixin elementoForm (){
+      padding: 8px;
+      display: block;
+      width: 100%;
+      margin-bottom: 16px;
+
 }
-header {
-  background-color: darken($corPrincipal, 10%);
-  padding: 20px;
+@function pixelParaRem($alvoEmpx, $baseEmPx: 16px) {
+  @return math.div($alvoEmpx,$baseEmPx) + em;
+  
+}
+
+body{
+  background-color: #eee;
+}
+.container{
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header{
+  padding: 16px 0;
   text-align: center;
-  h1{
-    font-size: 2.5em;
-    margin: 0;
-    color: $corDoTexto;
+  background-color: variaveris.$corPrincipal;
+  color: white;
+
+}
+.form-container{
+ height: calc(100vh - 70px);
+ display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 760px;
+
+  h2{
+    font-size: pixelParaRem(48px);
+    text-align: center;
+  }
+  form{
+    width: 100%;
+    max-width: 480px;
+    margin-top: 40px;
+    input{
+      @include elementoForm;
+      background-color: transparent;
+      border: none;
+      border-bottom:3px solid  variaveris.$corPrincipal;
+    }
+    button{
+      @include elementoForm;
+      background-color: variaveris.$corSecundaria;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      color: white;
+
+      &:hover{
+        background-color: darken(variaveris.$corSecundaria, 15%);
+      }
+      
+    }
+    label{
+      font-weight: bold;
+      cursor: pointer;
+    }
   }
 }
-button {
-  background-color: $corDoTexto;
-  color: $corPrincipal;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1em;
-  cursor: pointer;
-  &:hover {
-    background-color: darken($corDoTexto, 15%);
+
+@media  screen and (max-width: variaveris.$mobile) {
+  .container{
+    max-width: 80%;
   }
 }
