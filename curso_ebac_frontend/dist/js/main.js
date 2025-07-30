@@ -1,0 +1,2 @@
+let meuCarrossel=document.getElementById("carousel_img"),linkDownload=document.getElementById("linkDownload");function atualizarLinkDownload(){var e,a=meuCarrossel.querySelector(".carousel-item.active");a&&(a=a.querySelector("img"))&&(a=a.src,console.log("URL da imagem ativa:",a),e=a.substring(a.lastIndexOf("/")+1),linkDownload.href=a,linkDownload.setAttribute("download",e))}meuCarrossel.addEventListener("slid.bs.carousel",atualizarLinkDownload),document.addEventListener("DOMContentLoaded",atualizarLinkDownload);
+//# sourceMappingURL=main.js.map

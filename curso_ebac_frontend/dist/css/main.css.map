@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.scss","variaveis.scss"],"names":[],"mappings":"AAGA;EACI,kBCJS","sourcesContent":["@use \"variaveis\";\r\n\r\n\r\nbody{\r\n    background-color: variaveis.$cordefundo;\r\n\r\n}","$cordefundo: #353b48;\r\n"],"file":"main.css"}
