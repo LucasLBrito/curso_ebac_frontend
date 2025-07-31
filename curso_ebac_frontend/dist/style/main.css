@@ -1,0 +1,29 @@
+body {
+  background-color: #718093;
+}
+
+h1 {
+  color: #f5f6fa;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.carousel-item img {
+  width: 80%;
+  height: 70vh;
+  padding: 0 20px;
+  border-radius: 10px;
+}
+
+p {
+  color: #dcdde1;
+}
+
+.btn {
+  background-color: #273c75;
+  color: #f5f6fa;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=main.css.map */

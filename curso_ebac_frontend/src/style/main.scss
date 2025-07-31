@@ -3,5 +3,27 @@
 
 body{
     background-color: variaveis.$cordefundo;
+}
 
+h1{
+    color: variaveis.$corfonte;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.carousel-item img {
+    width: 80%;
+    height: 70vh;
+    padding: 0 20px;
+    border-radius: 10px;
+}
+p {
+    color: variaveis.$corlink;
+}
+.btn {
+    background-color: variaveis.$corbotao;
+    color: variaveis.$corfonte;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
 }
