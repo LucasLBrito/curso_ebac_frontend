@@ -1,2 +1,11 @@
-.node_modules
-.package-lock.json
+# Node.js
+node_modules/
+package-lock.json
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.log
