@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "less": "^4.4.0"
+  },
+  "scripts": {
+  "less": "lessc styles/main.less css/main.css"
+}
+
+}

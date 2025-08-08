@@ -1,0 +1,28 @@
+@import "variables.less";
+@import "mixins.less";
+
+header {
+  background-color: @primary-color;
+  padding: @spacing-unit ;
+
+  .container {
+    .flex-center();
+    justify-content: space-between;
+  }
+
+  .branding img {
+    height: 70px;
+  }
+
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: @spacing-unit;
+
+    li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+}
