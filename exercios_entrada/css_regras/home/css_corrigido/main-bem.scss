@@ -1,45 +1,115 @@
-$cor-destaque: gold;
-$cor-fundo-destaque: #ffff42;
-$cor-descricao: gray;
-$largura-maxima: 640px;
+// Variáveis
+$cor-destaque: #ffd700;
+$cor-fundo-destaque: #fffae6;
+$cor-descricao: #666666;
+$cor-botao: #4CAF50;
+$cor-botao-hover: #45a049;
+$cor-texto-botao: #ffffff;
+$largura-maxima: 1200px;
 $margem-vertical: 56px;
-$espacamento-produto: 1%;
-$tamanho-fonte-nome: 1.2em;
-$padding-destaque: 8px;
+$espacamento-produto: 24px;
+$tamanho-fonte-nome: 1.4em;
+$padding-destaque: 16px;
 $borda-destaque: 2px solid $cor-destaque;
+$border-radius: 8px;
 
+// Reset
 * {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: 'Segoe UI', sans-serif;
+    box-sizing: border-box;
 }
 
+// Block
 .lista-produtos {
     max-width: $largura-maxima;
-    width: 100%;
+    width: 90%;
     margin: $margem-vertical auto;
     display: grid;
-    grid-template-columns: 33% 33% 33%;
-    grid-column-gap: $espacamento-produto;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $espacamento-produto;
+    
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @media (max-width: 480px) {
+        grid-template-columns: 1fr;
+    }
 }
 
+// Block
 .produto {
+    padding: 16px;
+    border-radius: $border-radius;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    
+    &:hover {
+        transform: translateY(-5px);
+    }
+
+    // Elements
     &__imagem {
         width: 100%;
+        border-radius: $border-radius;
+        margin-bottom: 16px;
     }
 
     &__nome {
         font-size: $tamanho-fonte-nome;
-        margin: 8px 0;
+        margin-bottom: 12px;
+        color: #333;
     }
 
     &__descricao {
         color: $cor-descricao;
+        margin-bottom: 16px;
+        line-height: 1.5;
     }
 
+    &__botao {
+        width: 100%;
+        padding: 12px;
+        background-color: $cor-botao;
+        color: $cor-texto-botao;
+        border: none;
+        border-radius: $border-radius;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: $cor-botao-hover;
+        }
+
+        // Modifier for button
+        &--destaque {
+            background-color: $cor-destaque;
+            
+            &:hover {
+                background-color: darken($cor-destaque, 10%);
+            }
+        }
+    }
+
+    // Modifier
     &--destaque {
         border: $borda-destaque;
         padding: $padding-destaque;
         background-color: $cor-fundo-destaque;
+        position: relative;
+        
+        &::before {
+            content: "Destaque";
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            background: $cor-destaque;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
     }
 }
