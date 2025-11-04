@@ -1,0 +1,45 @@
+$cor-destaque: gold;
+$cor-fundo-destaque: #ffff42;
+$cor-descricao: gray;
+$largura-maxima: 640px;
+$margem-vertical: 56px;
+$espacamento-produto: 1%;
+$tamanho-fonte-nome: 1.2em;
+$padding-destaque: 8px;
+$borda-destaque: 2px solid $cor-destaque;
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.lista-produtos {
+    max-width: $largura-maxima;
+    width: 100%;
+    margin: $margem-vertical auto;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-column-gap: $espacamento-produto;
+}
+
+.produto {
+    &__imagem {
+        width: 100%;
+    }
+
+    &__nome {
+        font-size: $tamanho-fonte-nome;
+        margin: 8px 0;
+    }
+
+    &__descricao {
+        color: $cor-descricao;
+    }
+
+    &--destaque {
+        border: $borda-destaque;
+        padding: $padding-destaque;
+        background-color: $cor-fundo-destaque;
+    }
+}
