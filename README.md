@@ -20,24 +20,18 @@ Este projeto é um exercício desenvolvido para o curso da EBAC, focado na aplic
 
 Para executar este projeto localmente, siga os passos abaixo:
 
-1.  **Clone o repositório**:
-    ```bash
-    git clone https://github.com/LucasLBrito/curso_ebac_frontend.git
-    cd curso_ebac_frontend/exercicio_es6
-    ```
-
-2.  **Instale as dependências**:
+1.  **Instale as dependências**:
     ```bash
     npm install
     ```
 
-3.  **Transpile o código**:
+2.  **Transpile o código**:
     ```bash
     npm run build
     ```
     Este comando irá transpilar os arquivos JavaScript da pasta `src` para a pasta `dist`.
 
-4.  **Execute o projeto**:
+3.  **Execute o projeto**:
     Abra o arquivo `index.html` (se houver, ou crie um para importar o `dist/main.js`) em seu navegador, ou execute o arquivo `dist/main.js` diretamente em um ambiente Node.js.
 
 ## Estrutura do Projeto
