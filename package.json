@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "@babel/cli": "^7.28.6",
+    "@babel/core": "^7.29.0",
+    "@babel/preset-env": "^7.29.0"
+  },
+  "browerlsit": "> 0.25%, not dead, not ie 11",
+      "scripts": {
+    "build": "babel src -d dist"
+  }
+}
